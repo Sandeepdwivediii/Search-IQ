@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PartsIQ - AI-Powered Spare Parts Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="AI-powered spare parts recommendation system for electronic devices">
+    <meta name="keywords" content="spare parts, AI recommendations, device repair, electronics">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-cogs nav-logo"></i>
+                <span class="brand-name">PartsIQ</span>
+                <span class="brand-tagline">AI</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#supported-brands" class="nav-link">Brands</a>
+                <a href="#help" class="nav-link">Help</a>
+                <button class="nav-cta">Contact Support</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-robot"></i>
+                    <span>AI-Powered Recommendations</span>
+                </div>
+                <h1 class="hero-title">
+                    Find The Right
+                    <span class="gradient-text">Spare Parts</span>
+                    Instantly
+                </h1>
+                <p class="hero-description">
+                    Our advanced AI analyzes your device model and issue description to recommend 
+                    the exact spare parts you need. Fast, accurate, and reliable.
+                </p>
+                <div class="hero-features">
+                    <div class="feature-highlight">
+                        <i class="fas fa-search"></i>
+                        <span>Smart Search</span>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-shield-check"></i>
+                        <span>Verified Parts</span>
+                    </div>
+                    <div class="feature-highlight">
+                        <i class="fas fa-bolt"></i>
+                        <span>Instant Results</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device-showcase">
+                    <div class="device-card device-1">
+                        <i class="fas fa-snowflake"></i>
+                        <span>AC Units</span>
+                    </div>
+                    <div class="device-card device-2">
+                        <i class="fas fa-tv"></i>
+                        <span>Electronics</span>
+                    </div>
+                    <div class="device-card device-3">
+                        <i class="fas fa-tools"></i>
+                        <span>Appliances</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Application -->
+    <main class="main-app">
+        <div class="app-container">
+            <!-- Enhanced Header -->
+            <div class="app-header">
+                <div class="header-content">
+                    <h2 class="section-title">
+                        <i class="fas fa-cogs section-icon"></i>
+                        Spare Parts Finder
+                    </h2>
+                    <p class="section-description">
+                        Describe your device and issue to get AI-powered part recommendations
+                    </p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Parts Database</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Match Accuracy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Form -->
+            <div class="form-wizard">
+                <div class="wizard-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <span>Device Info</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <span>Issue Details</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <span>Recommendations</span>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <div class="form-card">
+                        <div class="form-section active" id="step-1">
+                            <div class="form-header">
+                                <h3>
+                                    <i class="fas fa-microchip"></i>
+                                    Device Information
+                                </h3>
+                                <p>Tell us about your device to get started</p>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="brand-select" class="form-label">
+                                        <i class="fas fa-building"></i>
+                                        Device Brand
+                                        <span class="required">*</span>
+                                    </label>
+                                    <div class="select-wrapper">
+                                        <select id="brand-select" onchange="loadDeviceModels()" class="form-select" required>
+                                            <option value="">Choose your brand</option>
+                                            <option value="samsung">
+                                                <i class="fab fa-samsung"></i> Samsung
+                                            </option>
+                                            <option value="xyz">XYZ Corporation</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down select-arrow"></i>
+                                    </div>
+                                    <div class="form-help">Select the manufacturer of your device</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="device-model" class="form-label">
+                                        <i class="fas fa-tag"></i>
+                                        Model Number
+                                        <span class="required">*</span>
+                                    </label>
+                                    <div class="input-wrapper">
+                                        <input 
+                                            type="text" 
+                                            id="device-model" 
+                                            placeholder="e.g., AR18NV3HFTR"
+                                            class="form-input"
+                                            required
+                                        >
+                                        <i class="fas fa-qrcode input-icon" title="Scan model number"></i>
+                                    </div>
+                                    <div class="form-help">Find this on your device's label or manual</div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn-next" onclick="nextStep(2)">
+                                    Next Step
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-section" id="step-2" style="display: none;">
+                            <div class="form-header">
+                                <h3>
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    Problem Description
+                                </h3>
+                                <p>Describe what's wrong with your device</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="issue-description" class="form-label">
+                                    <i class="fas fa-comment-medical"></i>
+                                    Issue Description
+                                    <span class="required">*</span>
+                                </label>
+                                <div class="textarea-wrapper">
+                                    <textarea 
+                                        id="issue-description" 
+                                        placeholder="Describe the problem in detail... (e.g., AC not cooling, strange noise, water leaking)"
+                                        rows="5"
+                                        class="form-textarea"
+                                        required
+                                    ></textarea>
+                                    <div class="char-counter">
+                                        <span id="char-count">0</span>/500 characters
+                                    </div>
+                                </div>
+                                <div class="form-help">Be as specific as possible for better recommendations</div>
+                            </div>
+
+                            <div class="quick-issues">
+                                <h4>Common Issues:</h4>
+                                <div class="issue-grid">
+                                    <button type="button" class="issue-btn" onclick="fillIssueExample('not cooling properly')">
+                                        <i class="fas fa-snowflake"></i>
+                                        <div class="issue-content">
+                                            <span class="issue-title">Cooling Problems</span>
+                                            <span class="issue-desc">Not cooling, warm air</span>
+                                        </div>
+                                    </button>
+                                    <button type="button" class="issue-btn" onclick="fillIssueExample('strange noise from compressor')">
+                                        <i class="fas fa-volume-up"></i>
+                                        <div class="issue-content">
+                                            <span class="issue-title">Unusual Noise</span>
+                                            <span class="issue-desc">Grinding, clicking sounds</span>
+                                        </div>
+                                    </button>
+                                    <button type="button" class="issue-btn" onclick="fillIssueExample('remote not working')">
+                                        <i class="fas fa-remote-control"></i>
+                                        <div class="issue-content">
+                                            <span class="issue-title">Remote Issues</span>
+                                            <span class="issue-desc">Unresponsive, broken</span>
+                                        </div>
+                                    </button>
+                                    <button type="button" class="issue-btn" onclick="fillIssueExample('water leaking')">
+                                        <i class="fas fa-tint"></i>
+                                        <div class="issue-content">
+                                            <span class="issue-title">Water Leakage</span>
+                                            <span class="issue-desc">Dripping, flooding</span>
+                                        </div>
+                                    </button>
+                                    <button type="button" class="issue-btn" onclick="fillIssueExample('display not working')">
+                                        <i class="fas fa-tv"></i>
+                                        <div class="issue-content">
+                                            <span class="issue-title">Display Problems</span>
+                                            <span class="issue-desc">Blank, flickering screen</span>
+                                        </div>
+                                    </button>
+                                    <button type="button" class="issue-btn" onclick="fillIssueExample('power issues')">
+                                        <i class="fas fa-plug"></i>
+                                        <div class="issue-content">
+                                            <span class="issue-title">Power Problems</span>
+                                            <span class="issue-desc">Won't turn on/off</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="settings-panel">
+                                <h4>Search Settings</h4>
+                                <div class="settings-grid">
+                                    <div class="form-group">
+                                        <label for="max-results" class="form-label">
+                                            <i class="fas fa-list-ol"></i>
+                                            Number of Results
+                                        </label>
+                                        <div class="input-wrapper">
+                                            <input 
+                                                type="number" 
+                                                id="max-results" 
+                                                value="10" 
+                                                min="1" 
+                                                max="50"
+                                                class="form-input"
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-filter"></i>
+                                            Part Type Filter
+                                        </label>
+                                        <div class="checkbox-group">
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" id="filter-essential" checked>
+                                                <span class="checkmark"></span>
+                                                Essential parts only
+                                            </label>
+                                            <label class="checkbox-label">
+                                                <input type="checkbox" id="filter-oem">
+                                                <span class="checkmark"></span>
+                                                OEM parts preferred
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn-back" onclick="previousStep(1)">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Back
+                                </button>
+                                <button type="button" class="btn-search" onclick="searchSpareParts()">
+                                    <i class="fas fa-search"></i>
+                                    Find Spare Parts
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Loading -->
+            <div id="loading" class="loading-container" style="display: none;">
+                <div class="loading-content">
+                    <div class="loading-animation">
+                        <div class="gear gear-1">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="gear gear-2">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="gear gear-3">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                    </div>
+                    <h3>Analyzing Your Request</h3>
+                    <p id="loading-message">Searching our database of 10,000+ spare parts...</p>
+                    <div class="loading-progress">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <div class="loading-stats">
+                        <div class="loading-stat">
+                            <i class="fas fa-database"></i>
+                            <span>Scanning Database</span>
+                        </div>
+                        <div class="loading-stat">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Analysis</span>
+                        </div>
+                        <div class="loading-stat">
+                            <i class="fas fa-check"></i>
+                            <span>Compatibility Check</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Results -->
+            <div id="spare-parts-results" class="results-section"></div>
+        </div>
+    </main>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="info-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How PartsIQ Works</h2>
+                <p>Our AI-powered system makes finding spare parts simple and accurate</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Enter Device Info</h3>
+                    <p>Provide your device brand and model number for precise identification</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-comment-medical"></i>
+                    </div>
+                    <h3>Describe the Issue</h3>
+                    <p>Tell us what's wrong with your device in your own words</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Analysis</h3>
+                    <p>Our AI analyzes your input and matches it with our parts database</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h3>Get Recommendations</h3>
+                    <p>Receive a ranked list of compatible spare parts with compatibility scores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Brands Section -->
+    <section id="supported-brands" class="brands-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Supported Brands</h2>
+                <p>We support parts for major electronics manufacturers</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <i class="fab fa-samsung"></i>
+                    </div>
+                    <h3>Samsung</h3>
+                    <p>AC Units, Electronics</p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>XYZ Corp</h3>
+                    <p>Industrial Equipment</p>
+                </div>
+                <div class="brand-card coming-soon">
+                    <div class="brand-logo">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <h3>More Brands</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-cogs"></i>
+                        <span>PartsIQ</span>
+                    </div>
+                    <p>AI-powered spare parts recommendations for electronic devices and appliances.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">How It Works</a></li>
+                            <li><a href="#">Supported Devices</a></li>
+                            <li><a href="#">API Access</a></li>
+                            <li><a href="#">Mobile App</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Support</a></li>
+                            <li><a href="#">Part Request</a></li>
+                            <li><a href="#">Warranty Info</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PartsIQ. All rights reserved. Powered by advanced AI technology.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', path='/js/spare_parts.js') }}"></script>
+    <script>
+        // Character counter for textarea
+        document.getElementById('issue-description').addEventListener('input', function() {
+            const count = this.value.length;
+            document.getElementById('char-count').textContent = count;
+            
+            if (count > 450) {
+                document.getElementById('char-count').style.color = '#e53e3e';
+            } else {
+                document.getElementById('char-count').style.color = '#718096';
+            }
+        });
+
+        // Form wizard functionality
+        function nextStep(step) {
+            // Validate current step
+            if (step === 2) {
+                const brand = document.getElementById('brand-select').value;
+                const model = document.getElementById('device-model').value;
+                
+                if (!brand || !model) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+            }
+            
+            // Hide current step
+            document.querySelectorAll('.form-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show target step
+            document.getElementById(`step-${step}`).style.display = 'block';
+            
+            // Update wizard steps
+            document.querySelectorAll('.step').forEach((stepEl, index) => {
+                if (index + 1 <= step) {
+                    stepEl.classList.add('active');
+                } else {
+                    stepEl.classList.remove('active');
+                }
+            });
+        }
+
+        function previousStep(step) {
+            nextStep(step);
+        }
+
+        // Enhanced search with progress animation
+        function enhancedSearchSpareParts() {
+            const messages = [
+                "Analyzing device specifications...",
+                "Processing issue description...",
+                "Searching compatible parts...",
+                "Calculating compatibility scores...",
+                "Finalizing recommendations..."
+            ];
+            
+            let messageIndex = 0;
+            const messageElement = document.getElementById('loading-message');
+            const progressBar = document.getElementById('progress-bar');
+            
+            const updateProgress = () => {
+                if (messageIndex < messages.length) {
+                    messageElement.textContent = messages[messageIndex];
+                    progressBar.style.width = `${(messageIndex + 1) * 20}%`;
+                    messageIndex++;
+                    setTimeout(updateProgress, 800);
+                }
+            };
+            
+            updateProgress();
+            
+            // Call original search function
+            searchSpareParts();
+        }
+    </script>
+</body>
+</html>

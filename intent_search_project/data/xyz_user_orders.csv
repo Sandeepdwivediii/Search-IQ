@@ -1,0 +1,101 @@
+invoice_number,user_name,category,product_model,purchase_date,company
+INV10000,Thomas Mcclain,Refrigerator,RR20T182XR8,2022-06-24,Samsung
+INV10001,Mary Hamilton,Refrigerator,RT42M5538S8,2024-04-06,Whirlpool
+INV10002,Charles Roach,Refrigerator,RT42M5538S8,2023-08-05,LG
+INV10003,Wanda Anderson,Air Conditioner,AR24TVHCAWK,2023-03-10,Samsung
+INV10004,Robert Nguyen,Microwave,MC28M6036CB,2022-09-29,LG
+INV10005,Cameron Casey,Air Conditioner,AR24TVHCAWK,2022-07-12,Samsung
+INV10006,Hunter Ellis,Air Conditioner,AR12TY3QBBU,2023-11-24,Daikin
+INV10007,Renee Smith,Refrigerator,RF24R6201SG,2024-06-01,Whirlpool
+INV10008,Samuel Stein,Air Conditioner,AR18HSFSFWK,2022-10-21,Samsung
+INV10009,Rebecca Miller,Microwave,MG23K3515AK,2023-12-22,Panasonic
+INV10010,Dawn Hurley,Dishwasher,DD60DDFHX9,2023-12-11,LG
+INV10011,Colleen Freeman,Air Conditioner,AR18HSFSFWK,2025-04-28,Samsung
+INV10012,Leslie Garcia,Air Conditioner,AR18HSFSFWK,2024-03-03,LG
+INV10013,Christopher Wilson,Microwave,ME83X,2025-02-12,Samsung
+INV10014,Dorothy Haas,Dishwasher,DD60DDFHX9,2024-02-13,Siemens
+INV10015,Timothy Hill,Air Conditioner,AC052MNADKH,2024-07-09,LG
+INV10016,Mr. Robert Stewart,Dishwasher,DD60DDFHX9,2025-03-29,Bosch
+INV10017,Eric Charles,Dishwasher,DW80R5060UG,2024-03-21,Bosch
+INV10018,Anna Gonzales,Microwave,MC28M6036CB,2023-06-11,LG
+INV10019,Jesse Stewart,Microwave,ME83X,2024-04-26,LG
+INV10020,Rachel White,Air Conditioner,AR18HSFSFWK,2023-04-08,Samsung
+INV10021,Matthew Rose,Refrigerator,RF24R6201SG,2022-08-03,Samsung
+INV10022,Brittany Townsend,Air Conditioner,AC052MNADKH,2023-02-21,Samsung
+INV10023,Lydia Young,Air Conditioner,AR18HSFSFWK,2024-01-11,Daikin
+INV10024,Sarah Williams,Refrigerator,RF24R6201SG,2022-11-20,Samsung
+INV10025,John Hicks Jr.,Air Conditioner,AR12TY3QBBU,2025-02-14,Daikin
+INV10026,Mario Murray,Dishwasher,DW80R2031US,2024-09-23,LG
+INV10027,Casey Jensen,Microwave,ME83X,2022-08-08,LG
+INV10028,Anna Brown,Microwave,MC28M6036CB,2024-01-01,Samsung
+INV10029,Martin Smith,Dishwasher,DW80R2031US,2022-09-30,Bosch
+INV10030,Veronica Richards,Air Conditioner,AR18HSFSFWK,2025-04-18,Samsung
+INV10031,Tonya Gomez,Air Conditioner,AR12TY3QBBU,2023-05-23,Daikin
+INV10032,Timothy Torres,Air Conditioner,AR18HSFSFWK,2024-09-05,LG
+INV10033,Marcus Jordan,Air Conditioner,AR18HSFSFWK,2022-09-28,Samsung
+INV10034,Christopher Walker,Dishwasher,DW80R5060UG,2022-07-16,Siemens
+INV10035,Linda Brown,Microwave,MG23K3515AK,2025-04-05,Samsung
+INV10036,Jennifer Steele,Microwave,MC28M6036CB,2022-12-23,LG
+INV10037,Rebecca Navarro,Refrigerator,RR20T182XR8,2024-10-11,LG
+INV10038,Jeffrey Oliver Jr.,Dishwasher,DW80R2031US,2024-10-20,Siemens
+INV10039,Christine Hunter,Microwave,CE1041DSB2,2022-10-22,LG
+INV10040,Rebecca Franklin,Microwave,CE1041DSB2,2023-11-21,Panasonic
+INV10041,Jamie Gutierrez,Refrigerator,RF24R6201SG,2024-06-03,Whirlpool
+INV10042,Laura Rios,Microwave,MC28M6036CB,2022-11-17,LG
+INV10043,Jessica Hubbard,Dishwasher,DW80R2031US,2024-02-02,LG
+INV10044,Troy Pham,Dishwasher,DD60DDFHX9,2024-03-10,Siemens
+INV10045,Casey Walters MD,Dishwasher,DW80R5060UG,2025-06-03,Bosch
+INV10046,Donna Campbell,Air Conditioner,AR24TVHCAWK,2023-05-19,LG
+INV10047,Elijah Thompson,Microwave,MC28M6036CB,2022-08-30,Samsung
+INV10048,Matthew Estrada,Refrigerator,RF24R6201SG,2024-10-06,Whirlpool
+INV10049,George Ford,Refrigerator,RF24R6201SG,2023-09-12,Samsung
+INV10050,Casey Walters MD,Dishwasher,LG0752,2023-05-02,Bosch
+INV10051,Deanna Velazquez,Microwave,LG5210,2022-09-18,LG
+INV10052,Jeffrey Oliver Jr.,Microwave,LG1849,2023-05-28,Panasonic
+INV10053,Jesse Stewart,Microwave,Samsung6369,2023-12-28,LG
+INV10054,Kevin Powell,Dishwasher,LG5956,2024-06-24,LG
+INV10055,Wendy Gibson,Air Conditioner,LG9637,2023-09-12,Daikin
+INV10056,John Hicks Jr.,Refrigerator,Whirlpool4470,2024-02-19,LG
+INV10057,Tonya Gomez,Microwave,Samsung9451,2025-05-13,Panasonic
+INV10058,Anna Brown,Refrigerator,Whirlpool9636,2024-06-16,LG
+INV10059,John Hicks Jr.,Dishwasher,LG7497,2025-03-19,LG
+INV10060,George Ford,Microwave,LG5724,2024-12-04,LG
+INV10061,Casey Jensen,Air Conditioner,Daikin2806,2022-09-16,Daikin
+INV10062,Mary Hamilton,Microwave,LG9863,2024-12-09,Panasonic
+INV10063,Dorothy Haas,Air Conditioner,Samsung9259,2023-08-15,Samsung
+INV10064,Renee Smith,Air Conditioner,LG5701,2024-01-24,Samsung
+INV10065,Brittany Townsend,Air Conditioner,Daikin0849,2024-04-07,Daikin
+INV10066,Scott Ramos,Microwave,Panasonic7649,2022-07-20,Samsung
+INV10067,Martin Smith,Air Conditioner,LG1402,2023-04-10,Daikin
+INV10068,Jessica Morse,Refrigerator,Whirlpool3532,2024-02-14,LG
+INV10069,Jeffrey Oliver Jr.,Dishwasher,LG1665,2022-07-19,Bosch
+INV10070,Donna Campbell,Dishwasher,LG8203,2025-01-20,Bosch
+INV10071,Rachael Vasquez,Dishwasher,Siemens3479,2023-08-05,LG
+INV10072,Samuel Stein,Dishwasher,Bosch1309,2023-01-20,Bosch
+INV10073,Matthew Rose,Refrigerator,Samsung1827,2023-04-10,LG
+INV10074,Jesse Stewart,Microwave,Panasonic5486,2025-04-10,Samsung
+INV10075,Lauren Dunn,Refrigerator,Whirlpool2841,2023-10-11,Samsung
+INV10076,Casey Jensen,Air Conditioner,Samsung2953,2024-09-25,Daikin
+INV10077,Donna Campbell,Refrigerator,Whirlpool1148,2024-01-02,Samsung
+INV10078,Kevin Figueroa,Refrigerator,Whirlpool6215,2024-11-27,LG
+INV10079,Donald Lambert,Dishwasher,Siemens3743,2025-04-13,Bosch
+INV10080,Cameron Casey,Microwave,Samsung6591,2023-09-02,LG
+INV10081,Linda Brown,Air Conditioner,LG3727,2025-05-23,Daikin
+INV10082,Jessica Gonzalez,Microwave,Samsung2558,2023-02-17,LG
+INV10083,Leslie Garcia,Dishwasher,LG2865,2023-02-16,Siemens
+INV10084,Timothy Torres,Microwave,Samsung4927,2024-11-02,Samsung
+INV10085,Hunter Ellis,Refrigerator,Samsung9697,2023-12-14,Whirlpool
+INV10086,Anna Gonzales,Refrigerator,LG5015,2023-05-26,LG
+INV10087,Jack Wright,Air Conditioner,Daikin1426,2023-12-28,Samsung
+INV10088,Casey Jensen,Air Conditioner,Samsung9623,2023-02-16,Samsung
+INV10089,Troy Pham,Dishwasher,Siemens0025,2024-10-16,LG
+INV10090,Martin Smith,Dishwasher,Bosch0381,2022-08-19,Bosch
+INV10091,Leslie Garcia,Dishwasher,LG5727,2023-08-25,Siemens
+INV10092,Hunter Ellis,Refrigerator,Whirlpool4146,2023-02-22,Samsung
+INV10093,Mr. Robert Stewart,Dishwasher,Bosch1427,2024-07-20,Siemens
+INV10094,Thomas Joseph,Refrigerator,Samsung7640,2024-04-30,Whirlpool
+INV10095,Casey Walters MD,Refrigerator,LG9863,2022-11-11,Samsung
+INV10096,Troy Pham,Air Conditioner,Samsung2501,2024-11-27,Daikin
+INV10097,Dawn Hurley,Refrigerator,LG8047,2022-07-23,Whirlpool
+INV10098,Charles Roach,Air Conditioner,Samsung6118,2023-10-28,Samsung
+INV10099,Michelle Frazier,Dishwasher,Bosch0287,2023-11-29,Siemens

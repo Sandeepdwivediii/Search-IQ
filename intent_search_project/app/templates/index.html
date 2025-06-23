@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchIQ - AI-Powered Product Discovery & Parts Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Advanced AI-powered search engine for product discovery and intelligent spare parts recommendations">
+    <meta name="keywords" content="AI search, product discovery, spare parts, recommendations, e-commerce">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-brain nav-logo"></i>
+                <span class="brand-name">SearchIQ</span>
+                <span class="brand-tagline">AI</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="nav-cta">Get Started</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>Powered by Advanced AI</span>
+                </div>
+                <h1 class="hero-title">
+                    Intelligent Product Discovery
+                    <span class="gradient-text">Made Simple</span>
+                </h1>
+                <p class="hero-description">
+                    Discover products with AI-powered search and get intelligent spare parts recommendations. 
+                    Our advanced system understands your needs and delivers precisely what you're looking for.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Products Indexed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Accuracy Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">< 100ms</span>
+                        <span class="stat-label">Search Speed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-laptop"></i>
+                        <span>Laptops</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-headphones"></i>
+                        <span>Audio</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-tools"></i>
+                        <span>Parts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Application -->
+    <main class="main-app">
+        <div class="app-container">
+            <!-- Enhanced Navigation Tabs -->
+            <div class="tab-navigation">
+                <div class="tab-wrapper">
+                    <button class="tab-btn active" onclick="showTab('search', this)" data-tab="search">
+                        <div class="tab-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="tab-content-text">
+                            <span class="tab-title">Product Search</span>
+                            <span class="tab-subtitle">Discover products with AI</span>
+                        </div>
+                    </button>
+                    <button class="tab-btn" onclick="showTab('spare-parts', this)" data-tab="spare-parts">
+                        <div class="tab-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="tab-content-text">
+                            <span class="tab-title">Spare Parts</span>
+                            <span class="tab-subtitle">Smart recommendations</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="tab-indicator"></div>
+            </div>
+
+            <!-- Product Search Tab -->
+            <div id="search-tab" class="tab-content active">
+                <div class="search-section">
+                    <div class="search-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-search section-icon"></i>
+                            Product Discovery
+                        </h2>
+                        <p class="section-description">
+                            Tell us what you're looking for, and our AI will find the perfect match
+                        </p>
+                    </div>
+
+                    <div class="search-form-container">
+                        <form id="searchForm" class="search-form">
+                            <div class="search-input-wrapper">
+                                <div class="search-input-container">
+                                    <i class="fas fa-search search-icon"></i>
+                                    <input 
+                                        type="text" 
+                                        id="searchQuery" 
+                                        placeholder="What are you looking for? (e.g., gaming laptop under 80000)" 
+                                        class="search-input"
+                                        autocomplete="off"
+                                        required
+                                    >
+                                    <button type="submit" class="search-submit-btn">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                                <div class="search-suggestions" id="searchSuggestions"></div>
+                            </div>
+                        </form>
+
+                        <div class="quick-search">
+                            <span class="quick-search-label">Popular searches:</span>
+                            <div class="quick-search-tags">
+                                <button class="quick-tag" onclick="searchExample('gaming laptop')">
+                                    <i class="fas fa-laptop"></i> Gaming Laptop
+                                </button>
+                                <button class="quick-tag" onclick="searchExample('wireless headphones')">
+                                    <i class="fas fa-headphones"></i> Wireless Headphones
+                                </button>
+                                <button class="quick-tag" onclick="searchExample('smartphone under 20000')">
+                                    <i class="fas fa-mobile-alt"></i> Budget Phone
+                                </button>
+                                <button class="quick-tag" onclick="searchExample('kitchen appliances')">
+                                    <i class="fas fa-blender"></i> Kitchen
+                                </button>
+                                <button class="quick-tag" onclick="searchExample('fitness equipment')">
+                                    <i class="fas fa-dumbbell"></i> Fitness
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Loading Indicator -->
+                    <div id="loadingIndicator" class="loading-container" style="display: none;">
+                        <div class="loading-spinner">
+                            <div class="spinner-ring"></div>
+                            <div class="spinner-ring"></div>
+                            <div class="spinner-ring"></div>
+                        </div>
+                        <p class="loading-text">Searching our database of 50,000+ products...</p>
+                        <div class="loading-progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Search Results -->
+                    <div id="searchResults" class="results-section" style="display: none;"></div>
+                </div>
+            </div>
+
+            <!-- Spare Parts Tab -->
+            <div id="spare-parts-tab" class="tab-content" style="display: none;">
+                <div class="spare-parts-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <i class="fas fa-cogs section-icon"></i>
+                            Spare Parts Recommendation
+                        </h2>
+                        <p class="section-description">
+                            Get intelligent recommendations for spare parts based on your device and issue
+                        </p>
+                    </div>
+
+                    <div class="spare-parts-form-container">
+                        <div class="form-card">
+                            <div class="form-header">
+                                <h3>Device Information</h3>
+                                <p>Tell us about your device to get accurate recommendations</p>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="brand-select" class="form-label">
+                                        <i class="fas fa-building"></i>
+                                        Device Brand
+                                    </label>
+                                    <div class="select-wrapper">
+                                        <select id="brand-select" onchange="loadDeviceModels()" class="form-select">
+                                            <option value="">Choose your brand</option>
+                                            <option value="samsung">Samsung</option>
+                                            <option value="xyz">XYZ</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down select-arrow"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="device-model" class="form-label">
+                                        <i class="fas fa-tag"></i>
+                                        Model Number
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="device-model" 
+                                        placeholder="e.g., AR18NV3HFTR"
+                                        class="form-input"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="issue-description" class="form-label">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    Problem Description
+                                </label>
+                                <textarea 
+                                    id="issue-description" 
+                                    placeholder="Describe the issue you're experiencing with your device..."
+                                    rows="4"
+                                    class="form-textarea"
+                                ></textarea>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="max-results" class="form-label">
+                                        <i class="fas fa-list-ol"></i>
+                                        Number of Results
+                                    </label>
+                                    <input 
+                                        type="number" 
+                                        id="max-results" 
+                                        value="10" 
+                                        min="1" 
+                                        max="50"
+                                        class="form-input"
+                                    >
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button class="btn-primary-large" onclick="searchSpareParts()">
+                                        <i class="fas fa-search"></i>
+                                        Find Spare Parts
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="issue-examples">
+                            <h4>Common Issues:</h4>
+                            <div class="issue-tags">
+                                <button class="issue-tag" onclick="fillIssueExample('not cooling properly')">
+                                    <i class="fas fa-snowflake"></i>
+                                    Cooling Problems
+                                </button>
+                                <button class="issue-tag" onclick="fillIssueExample('strange noise from compressor')">
+                                    <i class="fas fa-volume-up"></i>
+                                    Unusual Noise
+                                </button>
+                                <button class="issue-tag" onclick="fillIssueExample('remote not working')">
+                                    <i class="fas fa-remote-control"></i>
+                                    Remote Issues
+                                </button>
+                                <button class="issue-tag" onclick="fillIssueExample('water leaking')">
+                                    <i class="fas fa-tint"></i>
+                                    Water Leakage
+                                </button>
+                                <button class="issue-tag" onclick="fillIssueExample('display not working')">
+                                    <i class="fas fa-tv"></i>
+                                    Display Problems
+                                </button>
+                                <button class="issue-tag" onclick="fillIssueExample('power issues')">
+                                    <i class="fas fa-plug"></i>
+                                    Power Problems
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spare Parts Loading -->
+                    <div id="spare-parts-loading" class="loading-container" style="display: none;">
+                        <div class="loading-spinner">
+                            <div class="spinner-ring"></div>
+                            <div class="spinner-ring"></div>
+                            <div class="spinner-ring"></div>
+                        </div>
+                        <p class="loading-text">Analyzing your device and finding compatible parts...</p>
+                        <div class="loading-progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Spare Parts Results -->
+                    <div id="spare-parts-results" class="results-section"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose SearchIQ?</h2>
+                <p class="section-description">Advanced AI technology meets user-friendly design</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Search</h3>
+                    <p>Our advanced machine learning algorithms understand context and intent to deliver precise results.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Get results in under 100ms with our optimized search infrastructure and intelligent caching.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Reliable & Accurate</h3>
+                    <p>99.9% accuracy rate with continuously improving AI models and quality-checked data.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Optimized</h3>
+                    <p>Seamless experience across all devices with responsive design and touch-friendly interface.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span>SearchIQ</span>
+                    </div>
+                    <p>Intelligent product discovery and spare parts recommendations powered by advanced AI technology.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">API</a></li>
+                            <li><a href="#">Documentation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Status</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SearchIQ. All rights reserved. Built with ❤️ and cutting-edge AI technology.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Performance Metrics (optional) -->
+    <div id="performanceMetrics" class="performance-metrics" style="display: none;"></div>
+
+    <script src="{{ url_for('static', path='/js/app.js') }}"></script>
+</body>
+</html>

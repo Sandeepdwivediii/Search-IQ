@@ -1,0 +1,62 @@
+{
+  "fashion_shopping": {
+    "cobra_paris_co6394a1_analog_wa": [],
+    "dongli_printed_boys_round_neck": [
+      "cobra_paris_co6394a1_analog_wa"
+    ],
+    "swagga_women_clogs": [
+      "dongli_printed_boys_round_neck"
+    ],
+    "packman_8_x_10_inches_security": [
+      "swagga_women_clogs"
+    ],
+    "mario_gotze_womens_printed_cas": [
+      "packman_8_x_10_inches_security"
+    ]
+  },
+  "home_shopping": {
+    "fabhomedecor_fabric_double_sof": [],
+    "elegance_polyester_multicolor_": [
+      "fabhomedecor_fabric_double_sof"
+    ],
+    "magical_knots_3d_printed_cushi": [
+      "elegance_polyester_multicolor_"
+    ],
+    "home_glass_vase": [
+      "magical_knots_3d_printed_cushi"
+    ],
+    "santosh_royal_fashion_cotton_p": [
+      "home_glass_vase"
+    ]
+  },
+  "general_shopping": {
+    "sicons_all_purpose_arnica_dog_": [],
+    "eternal_gandhi_super_series_cr": [
+      "sicons_all_purpose_arnica_dog_"
+    ],
+    "sicons_all_purpose_tea_tree_do": [
+      "eternal_gandhi_super_series_cr"
+    ],
+    "freelance_vacuum_bottles_350_m": [
+      "sicons_all_purpose_tea_tree_do"
+    ],
+    "sicons_conditioning_conditoner": [
+      "freelance_vacuum_bottles_350_m"
+    ]
+  },
+  "tech_shopping": {
+    "furst_usb_adapter_with_cable_f": [],
+    "casedeal_microsoft_nokia_lumia": [
+      "furst_usb_adapter_with_cable_f"
+    ],
+    "bulaky_vanity_case_jewellery_v": [
+      "casedeal_microsoft_nokia_lumia"
+    ],
+    "gadget-wagon_consistant_21_cha": [
+      "bulaky_vanity_case_jewellery_v"
+    ],
+    "borse_n16_make_up_and_jeweller": [
+      "gadget-wagon_consistant_21_cha"
+    ]
+  }
+}
