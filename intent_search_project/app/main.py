@@ -41,6 +41,12 @@ async def redirect_to_docs():
     """Redirect to API documentation"""
     return {"message": "API docs available at /docs"}
 
+# ADD THIS ROUTE TO CATCH UNWANTED TRACKING REQUESTS
+@app.get("/hybridaction/{path:path}")
+async def catch_tracking_requests(path: str):
+    """Catch and ignore tracking requests that cause 404 errors"""
+    return {"status": "ignored"}
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

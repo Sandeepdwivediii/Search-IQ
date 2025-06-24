@@ -8,97 +8,148 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta name="description" content="Advanced AI-powered search engine for product discovery and intelligent spare parts recommendations">
     <meta name="keywords" content="AI search, product discovery, spare parts, recommendations, e-commerce">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Enhanced Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <i class="fas fa-brain nav-logo"></i>
-                <span class="brand-name">SearchIQ</span>
-                <span class="brand-tagline">AI</span>
+                <div class="nav-logo-wrapper">
+                    <div class="nav-logo">
+                        <i class="fas fa-brain"></i>
+                        <div class="logo-pulse"></div>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">SearchIQ</span>
+                        <span class="brand-tagline">AI</span>
+                    </div>
+                </div>
             </div>
             <div class="nav-menu">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button class="nav-cta">Get Started</button>
+                <a href="#features" class="nav-link">
+                    <span>Features</span>
+                    <div class="nav-underline"></div>
+                </a>
+                <a href="#about" class="nav-link">
+                    <span>About</span>
+                    <div class="nav-underline"></div>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <span>Contact</span>
+                    <div class="nav-underline"></div>
+                </a>
+                <button class="nav-cta">
+                    <span>Get Started</span>
+                    <i class="fas fa-arrow-right"></i>
+                    <div class="btn-shine"></div>
+                </button>
             </div>
             <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Enhanced Hero Section -->
     <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
+                    <div class="badge-glow"></div>
                     <i class="fas fa-sparkles"></i>
-                    <span>Powered by Advanced AI</span>
+                    <span>AI-Driven Intelligence</span>
                 </div>
                 <h1 class="hero-title">
-                    Intelligent Product Discovery
-                    <span class="gradient-text">Made Simple</span>
-                </h1>
+    Find Exactly What You Need
+    <span class="gradient-text">Every Time</span>
+</h1>
                 <p class="hero-description">
-                    Discover products with AI-powered search and get intelligent spare parts recommendations. 
-                    Our advanced system understands your needs and delivers precisely what you're looking for.
+                    Experience the future of search with our AI-powered platform. Discover products 
+                    effortlessly and get intelligent spare parts recommendations with stunning precision.
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">50K+</span>
-                        <span class="stat-label">Products Indexed</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">20K+</span>
+                            <span class="stat-label">Products Indexed</span>
+                        </div>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">99.9%</span>
-                        <span class="stat-label">Accuracy Rate</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">90.2%</span>
+                            <span class="stat-label">Accuracy Rate</span>
+                        </div>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">< 100ms</span>
-                        <span class="stat-label">Search Speed</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number">&lt; 50ms</span>
+                            <span class="stat-label">Search Speed</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="floating-cards">
                     <div class="floating-card card-1">
+                        <div class="card-glow"></div>
                         <i class="fas fa-laptop"></i>
                         <span>Laptops</span>
+                        <div class="card-particles"></div>
                     </div>
                     <div class="floating-card card-2">
+                        <div class="card-glow"></div>
                         <i class="fas fa-headphones"></i>
                         <span>Audio</span>
+                        <div class="card-particles"></div>
                     </div>
                     <div class="floating-card card-3">
+                        <div class="card-glow"></div>
                         <i class="fas fa-tools"></i>
                         <span>Parts</span>
+                        <div class="card-particles"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Application -->
+    <!-- Enhanced Main Application -->
     <main class="main-app">
         <div class="app-container">
-            <!-- Enhanced Navigation Tabs -->
+            <!-- Beautiful Navigation Tabs -->
             <div class="tab-navigation">
                 <div class="tab-wrapper">
                     <button class="tab-btn active" onclick="showTab('search', this)" data-tab="search">
+                        <div class="tab-bg"></div>
                         <div class="tab-icon">
                             <i class="fas fa-search"></i>
                         </div>
                         <div class="tab-content-text">
                             <span class="tab-title">Product Search</span>
-                            <span class="tab-subtitle">Discover products with AI</span>
+                            <span class="tab-subtitle">AI-powered discovery</span>
                         </div>
+                        <div class="tab-glow"></div>
                     </button>
                     <button class="tab-btn" onclick="showTab('spare-parts', this)" data-tab="spare-parts">
+                        <div class="tab-bg"></div>
                         <div class="tab-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
@@ -106,17 +157,21 @@
                             <span class="tab-title">Spare Parts</span>
                             <span class="tab-subtitle">Smart recommendations</span>
                         </div>
+                        <div class="tab-glow"></div>
                     </button>
                 </div>
                 <div class="tab-indicator"></div>
             </div>
 
-            <!-- Product Search Tab -->
+            <!-- Enhanced Product Search Tab -->
             <div id="search-tab" class="tab-content active">
                 <div class="search-section">
                     <div class="search-header">
                         <h2 class="section-title">
-                            <i class="fas fa-search section-icon"></i>
+                            <div class="title-icon">
+                                <i class="fas fa-search"></i>
+                                <div class="icon-ripple"></div>
+                            </div>
                             Product Discovery
                         </h2>
                         <p class="section-description">
@@ -128,6 +183,7 @@
                         <form id="searchForm" class="search-form">
                             <div class="search-input-wrapper">
                                 <div class="search-input-container">
+                                    <div class="input-glow"></div>
                                     <i class="fas fa-search search-icon"></i>
                                     <input 
                                         type="text" 
@@ -139,6 +195,7 @@
                                     >
                                     <button type="submit" class="search-submit-btn">
                                         <i class="fas fa-arrow-right"></i>
+                                        <div class="btn-ripple"></div>
                                     </button>
                                 </div>
                                 <div class="search-suggestions" id="searchSuggestions"></div>
@@ -149,19 +206,29 @@
                             <span class="quick-search-label">Popular searches:</span>
                             <div class="quick-search-tags">
                                 <button class="quick-tag" onclick="searchExample('gaming laptop')">
-                                    <i class="fas fa-laptop"></i> Gaming Laptop
+                                    <div class="tag-bg"></div>
+                                    <i class="fas fa-laptop"></i>
+                                    <span>Gaming Laptop</span>
                                 </button>
                                 <button class="quick-tag" onclick="searchExample('wireless headphones')">
-                                    <i class="fas fa-headphones"></i> Wireless Headphones
+                                    <div class="tag-bg"></div>
+                                    <i class="fas fa-headphones"></i>
+                                    <span>Wireless Headphones</span>
                                 </button>
                                 <button class="quick-tag" onclick="searchExample('smartphone under 20000')">
-                                    <i class="fas fa-mobile-alt"></i> Budget Phone
+                                    <div class="tag-bg"></div>
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Budget Phone</span>
                                 </button>
                                 <button class="quick-tag" onclick="searchExample('kitchen appliances')">
-                                    <i class="fas fa-blender"></i> Kitchen
+                                    <div class="tag-bg"></div>
+                                    <i class="fas fa-blender"></i>
+                                    <span>Kitchen</span>
                                 </button>
                                 <button class="quick-tag" onclick="searchExample('fitness equipment')">
-                                    <i class="fas fa-dumbbell"></i> Fitness
+                                    <div class="tag-bg"></div>
+                                    <i class="fas fa-dumbbell"></i>
+                                    <span>Fitness</span>
                                 </button>
                             </div>
                         </div>
@@ -170,13 +237,18 @@
                     <!-- Enhanced Loading Indicator -->
                     <div id="loadingIndicator" class="loading-container" style="display: none;">
                         <div class="loading-spinner">
-                            <div class="spinner-ring"></div>
-                            <div class="spinner-ring"></div>
-                            <div class="spinner-ring"></div>
+                            <div class="spinner-ring ring-1"></div>
+                            <div class="spinner-ring ring-2"></div>
+                            <div class="spinner-ring ring-3"></div>
+                            <div class="spinner-center">
+                                <i class="fas fa-brain"></i>
+                            </div>
                         </div>
-                        <p class="loading-text">Searching our database of 50,000+ products...</p>
+                        <p class="loading-text">Analyzing your search with AI intelligence...</p>
                         <div class="loading-progress">
-                            <div class="progress-bar"></div>
+                            <div class="progress-bar">
+                                <div class="progress-shine"></div>
+                            </div>
                         </div>
                     </div>
 
@@ -185,12 +257,15 @@
                 </div>
             </div>
 
-            <!-- Spare Parts Tab -->
+            <!-- Enhanced Spare Parts Tab -->
             <div id="spare-parts-tab" class="tab-content" style="display: none;">
                 <div class="spare-parts-section">
                     <div class="section-header">
                         <h2 class="section-title">
-                            <i class="fas fa-cogs section-icon"></i>
+                            <div class="title-icon">
+                                <i class="fas fa-cogs"></i>
+                                <div class="icon-ripple"></div>
+                            </div>
                             Spare Parts Recommendation
                         </h2>
                         <p class="section-description">
@@ -200,6 +275,7 @@
 
                     <div class="spare-parts-form-container">
                         <div class="form-card">
+                            <div class="card-glow-bg"></div>
                             <div class="form-header">
                                 <h3>Device Information</h3>
                                 <p>Tell us about your device to get accurate recommendations</p>
@@ -218,6 +294,7 @@
                                             <option value="xyz">XYZ</option>
                                         </select>
                                         <i class="fas fa-chevron-down select-arrow"></i>
+                                        <div class="select-focus"></div>
                                     </div>
                                 </div>
 
@@ -226,12 +303,15 @@
                                         <i class="fas fa-tag"></i>
                                         Model Number
                                     </label>
-                                    <input 
-                                        type="text" 
-                                        id="device-model" 
-                                        placeholder="e.g., AR18NV3HFTR"
-                                        class="form-input"
-                                    >
+                                    <div class="input-wrapper">
+                                        <input 
+                                            type="text" 
+                                            id="device-model" 
+                                            placeholder="e.g., AR18NV3HFTR"
+                                            class="form-input"
+                                        >
+                                        <div class="input-focus"></div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -240,12 +320,15 @@
                                     <i class="fas fa-exclamation-triangle"></i>
                                     Problem Description
                                 </label>
-                                <textarea 
-                                    id="issue-description" 
-                                    placeholder="Describe the issue you're experiencing with your device..."
-                                    rows="4"
-                                    class="form-textarea"
-                                ></textarea>
+                                <div class="textarea-wrapper">
+                                    <textarea 
+                                        id="issue-description" 
+                                        placeholder="Describe the issue you're experiencing with your device..."
+                                        rows="4"
+                                        class="form-textarea"
+                                    ></textarea>
+                                    <div class="textarea-focus"></div>
+                                </div>
                             </div>
 
                             <div class="form-grid">
@@ -254,20 +337,25 @@
                                         <i class="fas fa-list-ol"></i>
                                         Number of Results
                                     </label>
-                                    <input 
-                                        type="number" 
-                                        id="max-results" 
-                                        value="10" 
-                                        min="1" 
-                                        max="50"
-                                        class="form-input"
-                                    >
+                                    <div class="input-wrapper">
+                                        <input 
+                                            type="number" 
+                                            id="max-results" 
+                                            value="10" 
+                                            min="1" 
+                                            max="50"
+                                            class="form-input"
+                                        >
+                                        <div class="input-focus"></div>
+                                    </div>
                                 </div>
                                 
                                 <div class="form-group">
                                     <button class="btn-primary-large" onclick="searchSpareParts()">
+                                        <div class="btn-bg"></div>
                                         <i class="fas fa-search"></i>
-                                        Find Spare Parts
+                                        <span>Find Spare Parts</span>
+                                        <div class="btn-shine"></div>
                                     </button>
                                 </div>
                             </div>
@@ -277,43 +365,54 @@
                             <h4>Common Issues:</h4>
                             <div class="issue-tags">
                                 <button class="issue-tag" onclick="fillIssueExample('not cooling properly')">
+                                    <div class="tag-bg"></div>
                                     <i class="fas fa-snowflake"></i>
-                                    Cooling Problems
+                                    <span>Cooling Problems</span>
                                 </button>
                                 <button class="issue-tag" onclick="fillIssueExample('strange noise from compressor')">
+                                    <div class="tag-bg"></div>
                                     <i class="fas fa-volume-up"></i>
-                                    Unusual Noise
+                                    <span>Unusual Noise</span>
                                 </button>
                                 <button class="issue-tag" onclick="fillIssueExample('remote not working')">
+                                    <div class="tag-bg"></div>
                                     <i class="fas fa-remote-control"></i>
-                                    Remote Issues
+                                    <span>Remote Issues</span>
                                 </button>
                                 <button class="issue-tag" onclick="fillIssueExample('water leaking')">
+                                    <div class="tag-bg"></div>
                                     <i class="fas fa-tint"></i>
-                                    Water Leakage
+                                    <span>Water Leakage</span>
                                 </button>
                                 <button class="issue-tag" onclick="fillIssueExample('display not working')">
+                                    <div class="tag-bg"></div>
                                     <i class="fas fa-tv"></i>
-                                    Display Problems
+                                    <span>Display Problems</span>
                                 </button>
                                 <button class="issue-tag" onclick="fillIssueExample('power issues')">
+                                    <div class="tag-bg"></div>
                                     <i class="fas fa-plug"></i>
-                                    Power Problems
+                                    <span>Power Problems</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Spare Parts Loading -->
+                    <!-- Enhanced Spare Parts Loading -->
                     <div id="spare-parts-loading" class="loading-container" style="display: none;">
                         <div class="loading-spinner">
-                            <div class="spinner-ring"></div>
-                            <div class="spinner-ring"></div>
-                            <div class="spinner-ring"></div>
+                            <div class="spinner-ring ring-1"></div>
+                            <div class="spinner-ring ring-2"></div>
+                            <div class="spinner-ring ring-3"></div>
+                            <div class="spinner-center">
+                                <i class="fas fa-cogs"></i>
+                            </div>
                         </div>
                         <p class="loading-text">Analyzing your device and finding compatible parts...</p>
                         <div class="loading-progress">
-                            <div class="progress-bar"></div>
+                            <div class="progress-bar">
+                                <div class="progress-shine"></div>
+                            </div>
                         </div>
                     </div>
 
@@ -324,38 +423,46 @@
         </div>
     </main>
 
-    <!-- Features Section -->
+    <!-- Enhanced Features Section -->
     <section id="features" class="features-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Why Choose SearchIQ?</h2>
-                <p class="section-description">Advanced AI technology meets user-friendly design</p>
+                <p class="section-description">Advanced AI technology meets beautiful design</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
+                    <div class="feature-bg"></div>
                     <div class="feature-icon">
                         <i class="fas fa-brain"></i>
+                        <div class="icon-glow"></div>
                     </div>
                     <h3>AI-Powered Search</h3>
                     <p>Our advanced machine learning algorithms understand context and intent to deliver precise results.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-bg"></div>
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
+                        <div class="icon-glow"></div>
                     </div>
                     <h3>Lightning Fast</h3>
-                    <p>Get results in under 100ms with our optimized search infrastructure and intelligent caching.</p>
+                    <p>Get results in under 50ms with our optimized search infrastructure and intelligent caching.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-bg"></div>
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
+                        <div class="icon-glow"></div>
                     </div>
                     <h3>Reliable & Accurate</h3>
-                    <p>99.9% accuracy rate with continuously improving AI models and quality-checked data.</p>
+                    <p>90.2% accuracy rate with continuously improving AI models and quality-checked data.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-bg"></div>
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
+                        <div class="icon-glow"></div>
                     </div>
                     <h3>Mobile Optimized</h3>
                     <p>Seamless experience across all devices with responsive design and touch-friendly interface.</p>
@@ -364,20 +471,33 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Enhanced Footer -->
     <footer class="footer">
+        <div class="footer-background">
+            <div class="footer-particles"></div>
+        </div>
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
+                        <div class="logo-glow"></div>
                         <i class="fas fa-brain"></i>
                         <span>SearchIQ</span>
                     </div>
                     <p>Intelligent product discovery and spare parts recommendations powered by advanced AI technology.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                            <div class="social-ripple"></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            <div class="social-ripple"></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <div class="social-ripple"></div>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -415,9 +535,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Performance Metrics (optional) -->
-    <div id="performanceMetrics" class="performance-metrics" style="display: none;"></div>
 
     <script src="{{ url_for('static', path='/js/app.js') }}"></script>
 </body>
