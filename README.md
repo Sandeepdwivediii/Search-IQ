@@ -102,9 +102,7 @@ SearchIQ & PartsIQ started as a basic intent-based search app and evolved into a
 
 ---
 
-## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
