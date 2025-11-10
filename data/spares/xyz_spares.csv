@@ -1,0 +1,5 @@
+part_name,part_number,price_usd,product_url,compatible_models,category,company
+Magnetron Assembly,MAG-001,3200,https://example.com/mag,MW1000;MW2000,microwave,Whirlpool
+Turntable Motor,MOT-220,950,https://example.com/motor,MW1000;IFB30X,microwave,IFB
+Control Panel Board,CTL-555,4200,https://example.com/ctl,MW1000;IFB30X,microwave,IFB
+Compressor Kit,CMP-AC15,7800,https://example.com/cmp,LG-AC15,ac,LG

@@ -1,0 +1,5 @@
+invoice_number,user_name,category,product_model,purchase_date,company
+INV-2022-001,Gautam,microwave,MW1000,2022-07-10,Whirlpool
+INV-2022-045,Gautam,microwave,IFB30X,2022-11-02,IFB
+INV-2023-010,Gautam,ac,LG-AC15,2023-04-21,LG
+INV-2022-099,Siddhant,microwave,MW1000,2022-02-15,Whirlpool

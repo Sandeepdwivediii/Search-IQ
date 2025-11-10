@@ -1,0 +1,11 @@
+id,title,brand,category,price,rating,description,url,image_url
+p1,Acer Nitro 5 Gaming Laptop,acer,laptop,74990,4.3,"15.6"" RTX 3050 gaming laptop",https://example.com/p1,
+p2,Lenovo IdeaPad Slim 3,lenovo,laptop,54990,4.2,Everyday laptop 16GB RAM,https://example.com/p2,
+p3,HP Victus Gaming Laptop,hp,laptop,85990,4.4,"Ryzen 7, RTX 4060",https://example.com/p3,
+p4,Sony WH-1000XM4 Headphones,sony,headphones,24990,4.7,ANC Bluetooth headphones,https://example.com/p4,
+p5,Boat Rockerz 550,boat,headphones,1999,4.0,Budget over-ear,https://example.com/p5,
+p6,Samsung Galaxy S23,samsung,smartphone,64999,4.6,Flagship smartphone,https://example.com/p6,
+p7,iPhone 14,apple,smartphone,69999,4.7,"A15 chip, great camera",https://example.com/p7,
+p8,IFB Convection Microwave 30L,ifb,microwave,16990,4.3,30L convection oven,https://example.com/p8,
+p9,LG Split AC 1.5 Ton,lg,ac,38990,4.4,"Inverter AC, copper condenser",https://example.com/p9,
+p10,Whirlpool Solo Microwave 20L,whirlpool,microwave,9990,4.1,Solo microwave oven,https://example.com/p10,
